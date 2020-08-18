@@ -82,7 +82,11 @@ def generate(text):
 
     identicon = draw_image(matrix, color, True)
 
-    file_name = text.replace(" ", "-") + ".png"
+    safe_name = "".join(
+        char if char.isalnum() else "-"
+        for char in text
+    )
+    file_name = safe_name + ".png"
     file_path = os.path.abspath(file_name)
     identicon.save(file_path, "PNG")
 
