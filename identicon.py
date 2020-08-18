@@ -41,7 +41,7 @@ def draw_image(matrix, hex_color, symmetrical):
     """
     SQUARE = 50
     size = (6 * SQUARE, 6 * SQUARE)
-    bg_color = (224, 224, 224)
+    bg_color = (232, 232, 232)
     pixel_on = hex_to_rgb(hex_color)
 
     if symmetrical:
